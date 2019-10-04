@@ -17,7 +17,7 @@
 	    ltrim($db["path"], "/")
 									)
 				);
-	$sql= "SELECT studentname, course FROM registercourse";
+	$sql= "SELECT studentname, course FROM RegisterCourse";
 
 	$stmt= $pdo->prepare($sql);
 	$stmt->setFetchMode(PDO::FETCH_ASSOC);
