@@ -26,9 +26,8 @@
 ?>
 <ul>
 	<?php 
-		foreach ($$resultSet as $row) {
-			echo "<li>".
-				$row["studentname"] . '--' . $row["course"] . "</li>";
+		foreach ($resultSet as $row) {
+			echo "<li>". $row["studentname"] . '--' . $row["course"] . "</li>";
 		}
 	 ?>
 </ul>
