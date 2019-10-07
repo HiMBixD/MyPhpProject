@@ -29,16 +29,7 @@ Fav: <input type="text" name="Fav" value=""><br>
 <input type="submit" value="Submit">
 </form>
 <?php
-`(int)$num`
-	if(isset($_POST['ID']))
-	{
-		$ID=(int)$_POST['ID'];
-		$add=[$ID,$_POST['Name'],$_POST['Course'],$_POST['Dob'],$_POST['Gender'],$_POST['Fav']];
-		$sql1= "INSERT INTO RegisterCourse values ($add[0],'$add[1]','$add[2]','$add[3]','$add[4]','$add[5]')";
-		$stmt1= $pdo->prepare($sql1);
-		$stmt1->setFetchMode(PDO::FETCH_ASSOC);
-		$stmt1->execute();
-	}
+
 	
 	$sql= "SELECT * FROM RegisterCourse";
 
