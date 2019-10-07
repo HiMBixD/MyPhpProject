@@ -54,7 +54,14 @@ Fav: <input type="text" name="Fav" value=""><br>
 		<form method="POST">
 		<input type="submit" name="button1"  value="Delete">
 		</form> 
-	<?php			
+	<?php
+			if (isset($_POST['button1'])) {
+							$sql2= "DELETE FROM RegisterCourse WHERE id=(int)$row["id"]";
+							$stmt2= $pdo->prepare($sql2);
+							$stmt2->setFetchMode(PDO::FETCH_ASSOC);
+							$stmt2->execute();
+						
+						}			
 		}
 	 ?>
 </ul>
