@@ -20,7 +20,7 @@
 				);
 ?>
 <form method="post">
-ID: <input type="text" name="ID" value=""><br>
+ID: <input type="text" name="ID" value="1"><br>
 Name: <input type="text" name="Name" value=""><br>
 Name Course: <input type="text" name="Course" value=""><br>
 Dob: <input type="text" name="Dob" value=""><br>
@@ -52,11 +52,17 @@ Fav: <input type="text" name="Fav" value=""><br>
 			echo "<li>". $row["id"] . '--' . $row["studentname"] . '--' . $row["course"] . '--' . $row["dob"] . '--' . $row["gender"] . '--' . $row["fav"] . "</li>";
 	?>
 		<form method="POST">
-		ID: <input type="text" name="ID" value="<?php $row["id"] ?>"><br>
+		ID: <input type="text" name="ID2" value="<?=$row["id"]?>"><br>
 		<input type="submit" name="button1"  value="Delete">
 		</form> 
 	<?php
-					
+		if (isset($_POST['button1'])) {
+							$sql2= "DELETE FROM RegisterCourse WHERE id=$_POST['ID2']";
+							$stmt2= $pdo->prepare($sql2);
+							$stmt2->setFetchMode(PDO::FETCH_ASSOC);
+							$stmt2->execute();
+						
+						}				
 		}
 	 ?>
 </ul>
