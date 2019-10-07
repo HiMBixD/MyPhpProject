@@ -27,7 +27,7 @@
 <ul>
 	<?php 
 		foreach ($resultSet as $row) {
-			echo "<li>". $row["studentname"] . '--' . $row["course"] . "</li>";
+			echo "<li>". $row["studentname"] . '--' . $row["course"] . '--' . $row["dob"] . '--' . $row["gender"] . '--' . $row["fav"] . "</li>";
 		}
 	 ?>
 </ul>
