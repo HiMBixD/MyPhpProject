@@ -17,7 +17,7 @@
 	    ltrim($db["path"], "/")
 									)
 				);
-	$sql1= "INSERT INTO RegisterCourse values ('name','namecourse','6/10/1997','gender','fav')";
+	$sql1= "INSERT INTO RegisterCourse values (3,'name','namecourse','6/10/1997','gender','fav')";
 	$stmt1= $pdo->prepare($sql1);
 	$stmt1->setFetchMode(PDO::FETCH_ASSOC);
 	$stmt1->execute();
