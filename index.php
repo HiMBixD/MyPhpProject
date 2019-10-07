@@ -49,9 +49,13 @@ Fav: <input type="text" name="Fav" value=""><br>
 <ul>
 	<?php 
 		foreach ($resultSet as $row) {
-			echo "<li>". $row["id"] . '--' . $row["studentname"] . '--' . $row["course"] . '--' . $row["dob"] . '--' . $row["gender"] . '--' . $row["fav"] . "</li>";
+			echo "<li>". $row["id"] . '--' . $row["studentname"] . '--' . $row["course"] . '--' . $row["dob"] . '--' . $row["gender"] . '--' . $row["fav"] . "</li>
+			<button type="button" onclick="">Delete!
+			</button>";
 		}
 	 ?>
 </ul>
+
+
 </body>
 </html>
