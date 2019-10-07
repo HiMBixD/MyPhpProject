@@ -19,7 +19,7 @@
 									)
 				);
 ?>
-<form method="get">
+<form method="post">
 ID: <input type="text" name="ID" value=""><br>
 Name: <input type="text" name="Name" value=""><br>
 Name Course: <input type="text" name="Course" value=""><br>
@@ -32,7 +32,7 @@ Fav: <input type="text" name="Fav" value=""><br>
 	if(isset($_POST['Name']))
 	{
 
-		$add=[$ID,$_POST['Name'],$_POST['Course'],$_POST['Dob'],$_POST['Gender'],$_POST['Fav']];
+		$add=[$_POST['ID'],$_POST['Name'],$_POST['Course'],$_POST['Dob'],$_POST['Gender'],$_POST['Fav']];
 		$sql1= "INSERT INTO RegisterCourse values ($add[0],'$add[1]','$add[2]','$add[3]','$add[4]','$add[5]')";
 		$stmt1= $pdo->prepare($sql1);
 		$stmt1->setFetchMode(PDO::FETCH_ASSOC);
