@@ -19,7 +19,7 @@
 									)
 				);
 ?>
-<form method="post">
+<form method="get">
 ID: <input type="text" name="ID" value=""><br>
 Name: <input type="text" name="Name" value=""><br>
 Name Course: <input type="text" name="Course" value=""><br>
