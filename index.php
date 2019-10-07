@@ -52,16 +52,11 @@ Fav: <input type="text" name="Fav" value=""><br>
 			echo "<li>". $row["id"] . '--' . $row["studentname"] . '--' . $row["course"] . '--' . $row["dob"] . '--' . $row["gender"] . '--' . $row["fav"] . "</li>";
 	?>
 		<form method="POST">
+		ID: <input type="text" name="ID" value="<?php $row["id"] ?>"><br>
 		<input type="submit" name="button1"  value="Delete">
 		</form> 
 	<?php
-			if (isset($_POST['button1'])) {
-							$sql2= "DELETE FROM RegisterCourse WHERE id=(int)$row["id"]";
-							$stmt2= $pdo->prepare($sql2);
-							$stmt2->setFetchMode(PDO::FETCH_ASSOC);
-							$stmt2->execute();
-						
-						}			
+					
 		}
 	 ?>
 </ul>
