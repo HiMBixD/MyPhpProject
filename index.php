@@ -51,14 +51,14 @@ Fav: <input type="text" name="Fav" value=""><br>
 		foreach ($resultSet as $row) {
 			echo "<li>". $row["id"] . '--' . $row["studentname"] . '--' . $row["course"] . '--' . $row["dob"] . '--' . $row["gender"] . '--' . $row["fav"] . "</li>";
 	?>
-		<form method="POST">
+		<form method="post">
 		ID: <input type="text" name="ID2" value="<?=$row["id"]?>"><br>
-		<input type="submit" name="button1"  value="Delete">
+		<input type="submit" name="bDelete"  value="Delete">
 		</form> 
 	<?php
 						
 		}
-		if(isset($_POST['button1']))
+		if(isset($_POST['bDelete']))
 	{
 
 		$IDt2=$_POST['ID2']
