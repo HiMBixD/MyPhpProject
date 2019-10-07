@@ -38,7 +38,15 @@ Fav: <input type="text" name="Fav" value=""><br>
 		$stmt1->setFetchMode(PDO::FETCH_ASSOC);
 		$stmt1->execute();
 	}
+	if(isset($_GET['bDelete']))
+	{
 
+		$IDt2=(int)$_GET['ID2']
+		$sql2= "DELETE FROM RegisterCourse WHERE id=$IDt2";
+		$stmt2= $pdo->prepare($sql2);
+		$stmt2->setFetchMode(PDO::FETCH_ASSOC);
+		$stmt2->execute();
+	}
 	$sql= "SELECT * FROM RegisterCourse";
 
 	$stmt= $pdo->prepare($sql);
