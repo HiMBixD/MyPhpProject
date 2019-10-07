@@ -50,7 +50,11 @@ Fav: <input type="text" name="Fav" value=""><br>
 	<?php 
 		foreach ($resultSet as $row) {
 			echo "<li>". $row["id"] . '--' . $row["studentname"] . '--' . $row["course"] . '--' . $row["dob"] . '--' . $row["gender"] . '--' . $row["fav"] . "</li>";
-					
+	?>
+		<form method="POST">
+		<input type="submit" name="button1"  value="Delete">
+		</form> 
+	<?php			
 		}
 	 ?>
 </ul>
