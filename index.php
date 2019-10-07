@@ -20,7 +20,7 @@
 				);
 ?>
 <form method="post">
-ID: <input type="text" name="ID" value="1"><br>
+ID: <input type="text" name="ID" value=""><br>
 Name: <input type="text" name="Name" value=""><br>
 Name Course: <input type="text" name="Course" value=""><br>
 Dob: <input type="text" name="Dob" value=""><br>
