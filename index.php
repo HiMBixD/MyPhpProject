@@ -51,7 +51,10 @@ Fav: <input type="text" name="Fav" value=""><br>
 		foreach ($resultSet as $row) {
 			echo "<li>". $row["id"] . '--' . $row["studentname"] . '--' . $row["course"] . '--' . $row["dob"] . '--' . $row["gender"] . '--' . $row["fav"] . "</li>";
 	?>
-			<button type="button" onclick="">Delete!</button>
+			<button type="button" onclick="<?php $sql2= "DELETE FROM RegisterCourse WHERE id=$row["id"]";
+			$stmt2= $pdo->prepare($sql2);
+			$stmt2->setFetchMode(PDO::FETCH_ASSOC);
+			$stmt2->execute(); ?>">Delete!</button>
 	<?php
 		}
 	 ?>
