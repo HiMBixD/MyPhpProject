@@ -29,7 +29,7 @@ Fav: <input type="text" name="Fav" value=""><br>
 <input type="submit" value="Submit">
 </form>
 <?php
-	if(isset($_POST['ID']))
+	if(isset($_POST['Name']))
 	{
 
 		$add=[$ID,$_POST['Name'],$_POST['Course'],$_POST['Dob'],$_POST['Gender'],$_POST['Fav']];
