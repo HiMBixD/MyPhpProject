@@ -38,7 +38,7 @@ Fav: <input type="text" name="Fav" value=""><br>
 		$stmt1->setFetchMode(PDO::FETCH_ASSOC);
 		$stmt1->execute();
 	}
-	if(isset($_POST['bDelete']))
+	if(isset($_POST['ID2']))
 	{
 		$IDt2=(int)$_POST['ID2'];
 		$sql2= "DELETE FROM RegisterCourse WHERE id=$IDt2";
@@ -58,10 +58,7 @@ Fav: <input type="text" name="Fav" value=""><br>
 		foreach ($resultSet as $row) {
 			echo "<li>". $row["id"] . '--' . $row["studentname"] . '--' . $row["course"] . '--' . $row["dob"] . '--' . $row["gender"] . '--' . $row["fav"] . "</li>";
 	?>
-		<form method="post">
-		ID: <input type="text" name="ID2" value="<?=$row["id"]?>" method="post"><br>
-		<input type="submit" name="bDelete"  value="Delete">
-		</form> 
+		 <a href="./index.php?ID2=<?=$row["id"]?>"><input type="submit" name="bDelete"  value="Delete"></a>
 	<?php					
 		}
 	 ?>
