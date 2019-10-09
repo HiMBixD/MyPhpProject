@@ -58,9 +58,7 @@ Fav: <input type="text" name="Fav" value=""><br>
 		foreach ($resultSet as $row) {
 			echo "<li>". $row["id"] . '--' . $row["studentname"] . '--' . $row["course"] . '--' . $row["dob"] . '--' . $row["gender"] . '--' . $row["fav"] . "</li>";
 	?>
-		<form action="">
 			<a href="./index.php?ID2=<?=$row["id"]?>"><input type="submit" name="bDelete"  value="Delete"></a>
-		</form>
 	<?php					
 		}
 	 ?>
