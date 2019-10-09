@@ -59,7 +59,7 @@ Fav: <input type="text" name="Fav" value=""><br>
 			echo "<li>". $row["id"] . '--' . $row["studentname"] . '--' . $row["course"] . '--' . $row["dob"] . '--' . $row["gender"] . '--' . $row["fav"] . "</li>";
 	?>
 		<form method="post">
-		ID: <input type="hidden" name="ID2" value="<?=$row["id"]?>"><br>
+		<input type="hidden" name="ID2" value="<?=$row["id"]?>">
 		<input type="submit" name="bDelete"  value="Delete">
 		</form> 
 	<?php					
